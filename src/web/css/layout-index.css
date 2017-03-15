@@ -1,15 +1,31 @@
 @CHARSET "UTF-8";
 
+a{
+	text-decoration:none;
+	color:#fff;
+}
+
 #background{
-	
+	background-color:silver;
+}
+
+#header{
+	display:block;
+	height:111px;
+	z-index:999;
+	margin-top:40px;
+	margin-left:60px;
+	margin-right:60px;
 }
 
 #mark{
-	
+	float:left;
 }
 
 #menu{
-	
+	float:right;
+	font-size:31px;
+	margin-top:13px;
 }
 
 #example{
