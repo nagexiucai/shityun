@@ -5,13 +5,21 @@ import random
 import uuid
 import time
 
-TEMPLATE = "./vm.xml"
+TEMPLATE = "/etc/shityun/default-vm.xml"
 
 def macgen():
     return ":".join(["%02x" % int(random.uniform(0,256)) for _ in range(6)])
 
 class Config(object):
-    default = {"Name":None, "UUID":None, "Image":"/default.qcow2", "MAC":None, "Net":"default", "VNC":"www.thisstack.com"}
+    default = {"Name":None,
+               "UUID":None,
+               "Image":"/etc/shityun/default-image.qcow2",
+               "MEM":262144,
+               "MAC":None,
+               "Net":"default",
+               "VNCPORT":"-1",
+               "VNCAUTO":"yes",
+               "VNCPW":"www.thisstack.com"}
     def verify(self):
         if self.UUID is None:
             self.UUID = str(uuid.uuid1())
