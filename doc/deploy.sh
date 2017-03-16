@@ -1,4 +1,6 @@
-if [ ! -d "/etc/shityun"]; then
+#!/usr/bin/env sh
+
+if [ ! -d "/etc/shityun" ]; then
   mkdir -p /etc/shityun
 fi
 
