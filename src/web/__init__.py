@@ -65,3 +65,4 @@ class HTTPServ():
 
 if __name__ == "__main__":
     HTTPServ.initialize()
+    HTTPServ.clear()

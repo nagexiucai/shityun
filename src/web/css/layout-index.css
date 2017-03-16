@@ -8,12 +8,10 @@ a{
 #background{
 	background-color:silver;
 	display:block;
-	position:relative;
 }
 
 #header{
 	height:111px;
-	z-index:999;
 	margin-top:40px;
 	margin-left:60px;
 	margin-right:60px;
@@ -30,11 +28,12 @@ a{
 }
 
 #example{
-	height:888px;
+	height:777px;
 }
 
 #footer{
 	height:111px;
+	text-align:center;
 }
 
 #friendship{
