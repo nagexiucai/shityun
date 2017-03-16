@@ -4,6 +4,7 @@ try:
     import libvirt
 except ImportError:
     print "please install libvirt"
+    exit()
 import random
 import uuid
 import time
@@ -57,7 +58,10 @@ class Domain(object):
         self.domain = self._find() or self._define()
     def __del__(self):pass
     def _find(self):
-        return self.virt.lookupByName(self.config.Name)
+        try:
+            return self.virt.lookupByName(self.config.Name)
+        except libvirt.libvirtError:
+            return False
     def _define(self):
         return self.virt.defineXML(xmlgen(self.config))
     def undefine(self): self.domain.undefine()

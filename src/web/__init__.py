@@ -5,7 +5,30 @@ from os import getcwd
 from os.path import join
 import pprint
 
-class MyCloud():
+conf = {
+    "/": {
+        "tools.sessions.on": True,
+        "tools.staticdir.root": getcwd()
+        },
+    "/static": {
+        "tools.staticdir.on": True,
+        "tools.staticdir.dir": getcwd()
+        },
+    "/favicon.ico": {
+        "tools.staticfile.on": True,
+        "tools.staticfile.filename": join(getcwd(), "img", "favicon.ico")
+        }
+}
+
+class HTTPServ():
+
+    @staticmethod
+    def initialize():
+        cherrypy.quickstart(HTTPServ(), "/", conf)
+
+    @staticmethod
+    def clear():
+        print "shutdown http service"
 
     @cherrypy.expose
     def index(self):
@@ -40,19 +63,5 @@ class MyCloud():
     def labscene(self, mode=None, vid=None):
         return '404'
 
-conf = {
-    "/": {
-        "tools.sessions.on": True,
-        "tools.staticdir.root": getcwd()
-        },
-    "/static": {
-        "tools.staticdir.on": True,
-        "tools.staticdir.dir": getcwd()
-        },
-    "/favicon.ico": {
-        "tools.staticfile.on": True,
-        "tools.staticfile.filename": join(getcwd(), "img", "favicon.ico")
-        }
-}
-
-cherrypy.quickstart(MyCloud(), "/", conf)
+if __name__ == "__main__":
+    HTTPServ.initialize()
