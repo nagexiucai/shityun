@@ -7,10 +7,11 @@ a{
 
 #background{
 	background-color:silver;
+	display:block;
+	position:relative;
 }
 
 #header{
-	display:block;
 	height:111px;
 	z-index:999;
 	margin-top:40px;
@@ -25,17 +26,21 @@ a{
 #menu{
 	float:right;
 	font-size:31px;
-	margin-top:13px;
+	margin-top:17px;
 }
 
 #example{
-	
+	height:888px;
+}
+
+#footer{
+	height:111px;
 }
 
 #friendship{
-	
+	height:90px;
 }
 
 #copyright{
-	
+	height:21px;
 }

@@ -1,6 +1,9 @@
 #coding=utf8
 
-# import libvirt
+try:
+    import libvirt
+except ImportError:
+    print "please install libvirt"
 import random
 import uuid
 import time
@@ -19,7 +22,7 @@ class Config(object):
                "Net":"default",
                "VNCPORT":"-1",
                "VNCAUTO":"yes",
-               "VNCPW":"www.thisstack.com"}
+               "VNCPW":"shityun"}
     def verify(self):
         if self.UUID is None:
             self.UUID = str(uuid.uuid1())
@@ -58,7 +61,7 @@ class Domain(object):
     def _define(self):
         return self.virt.defineXML(xmlgen(self.config))
     def undefine(self): self.domain.undefine()
-    def start(self): self.domain.start()
+    def start(self): self.domain.create()
     def shutdown(self): self.domain.shutdown()
     def destroy(self): self.domain.destroy()
     def suspend(self):pass
@@ -69,7 +72,7 @@ class Domain(object):
 if __name__ == "__main__":
     config = Config(Name="xiang")
     Domain.initialize()
-    domain = Domain()
+    domain = Domain(config)
     domain.start()
     time.sleep(60*5)
     domain.destroy()

@@ -1,0 +1,7 @@
+will be on pan.baidu.com.
+
+win7x86.img
+win7x86-64.img
+windows-server-2008-r2.img
+centos7.img
+ubuntu.img
