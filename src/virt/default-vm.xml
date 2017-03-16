@@ -1,3 +1,4 @@
+<!-- win7x86-64 sampled -->
 <domain type='kvm'>
   <name>%(Name)s</name>
   <uuid>%(UUID)s</uuid>

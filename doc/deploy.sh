@@ -1,8 +1,7 @@
-mkdir -p /etc/shityun
-cp ../src/virt/default-image.qcow2 /etc/shityun
-cp ../src/virt/default-network.xml /etc/shityun
-cp ../src/virt/default-vm.xml /etc/shityun
+if [ ! -d "/etc/shityun"]; then
+  mkdir -p /etc/shityun
+fi
 
-virsh net-define /etc/shityun/default-network.xml
-virsh net-autostart default
-virsh net-start default
+cp -f ../src/virt/default-image.txt /etc/shityun
+cp -f ../src/virt/default-network.xml /etc/shityun
+cp -f ../src/virt/default-vm.xml /etc/shityun

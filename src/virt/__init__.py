@@ -10,13 +10,13 @@ import time
 
 TEMPLATE = "/etc/shityun/default-vm.xml"
 
-def macgen():
+def macgen(): #TODO: unicast/multicast/broadcast
     return ":".join(["%02x" % int(random.uniform(0,256)) for _ in range(6)])
 
 class Config(object):
     default = {"Name":None,
                "UUID":None,
-               "Image":"/etc/shityun/default-image.qcow2",
+               "Image":"/etc/shityun/default.img",
                "MEM":262144,
                "MAC":None,
                "Net":"default",
@@ -70,7 +70,7 @@ class Domain(object):
 #virsh-command-pipe
 
 if __name__ == "__main__":
-    config = Config(Name="xiang")
+    config = Config(Name="shityun")
     Domain.initialize()
     domain = Domain(config)
     domain.start()

@@ -1,7 +1,7 @@
 <network>
   <name>default</name>
-  <bridge name="virbr0"/>
-  <forward/>
+  <bridge name="default"/>
+  <forward mode="route" dev="{{IF}}"/>
   <ip address="192.168.100.1" netmask="255.255.255.0">
     <dhcp>
       <range start="192.168.100.2" end="192.168.100.254"/>
