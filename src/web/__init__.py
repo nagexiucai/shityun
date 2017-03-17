@@ -41,10 +41,10 @@ class HTTPServ(): #TODO: html cache
     @cherrypy.expose
     def index(self):
         try:
-            with open('./html/index.html') as html:
+            with open(pjoin(WEBROOT, "html/index.html")) as html:
                 return html.read()
-        except:
-            return '404'
+        except IOError:
+            return "404"
 
     @cherrypy.expose
     def register(self, account, password):
@@ -60,14 +60,17 @@ class HTTPServ(): #TODO: html cache
 
     @cherrypy.expose
     def manager(self):
-        return '404'
+        return "404"
 
     @cherrypy.expose
     def courses(self, cid=None):
         pprint.pprint(cherrypy.request.params)
         if cid is None:
-            with open("./html/courses.html") as html:
-                return html.read()
+            try:
+                with open(pjoin(WEBROOT, "html/courses.html")) as html:
+                    return html.read()
+            except IOError:
+                return "404"
         else:
             with db.Course() as course:
                 result = course.select("UUID='%s'" % cid)
@@ -76,7 +79,7 @@ class HTTPServ(): #TODO: html cache
 
     @cherrypy.expose
     def labscene(self, mode=None, vid=None):
-        return '404'
+        return "404"
 
 if __name__ == "__main__":
     HTTPServ.initialize()
