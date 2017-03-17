@@ -6,8 +6,11 @@ a{
 }
 
 #background{
+	min-width:888px;
+	height:100%;
+	margin:0px;
+	text-align:center;
 	background-color:silver;
-	display:block;
 }
 
 #header{
@@ -18,28 +21,31 @@ a{
 }
 
 #mark{
-	float:left;
+	
 }
 
 #menu{
-	float:right;
-	font-size:31px;
+	font-size:xx-large;
 	margin-top:17px;
 }
 
 #example{
-	height:777px;
+	height:666px;
+	padding-top:17px;
+	padding-bottom:17px;
+	overflow:hidden;
 }
 
 #footer{
 	height:111px;
-	text-align:center;
+	padding-top:17px;
 }
 
 #friendship{
-	height:90px;
+	font-size:x-large;
 }
 
 #copyright{
-	height:21px;
+	font-size:large;
+	margin-top:17px;
 }
