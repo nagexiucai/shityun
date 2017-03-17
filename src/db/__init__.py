@@ -32,7 +32,8 @@ class Model(object):
     @staticmethod
     def clear():
         if Model and Model.connect is not None:
-            print "close connect"
+            print "close database connection"
+            #TODO: dump memory
             Model.connect.close()
             Model.connect = None
     def __init__(self, **kwargs):

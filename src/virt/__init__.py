@@ -49,6 +49,7 @@ class Domain(object):
             Domain.virt = libvirt.open('qemu:///system')
     @staticmethod
     def clear():
+        print "disconnect qemu-kvm virtengine"
         if Domain.virt is not None:
             Domain.virt.close()
             Domain.virt = None
