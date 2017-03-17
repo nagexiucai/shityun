@@ -1,26 +1,34 @@
 #coding=utf8
 
 import cherrypy
-from os import getcwd
-from os.path import join
+from os.path import abspath, dirname, join as pjoin
 import pprint
+import db
+from socket import gethostname, gethostbyname
+
+WEBROOT = abspath(dirname(__file__))
 
 conf = {
+    "global": {
+        "server.socket_host": gethostbyname(gethostname()),
+        "server.socket_port": 9527,
+        "server.thread_pool": 8
+    },
     "/": {
         "tools.sessions.on": True,
-        "tools.staticdir.root": getcwd()
+        "tools.staticdir.root": WEBROOT
         },
     "/static": {
         "tools.staticdir.on": True,
-        "tools.staticdir.dir": getcwd()
+        "tools.staticdir.dir": WEBROOT
         },
     "/favicon.ico": {
         "tools.staticfile.on": True,
-        "tools.staticfile.filename": join(getcwd(), "img", "favicon.ico")
+        "tools.staticfile.filename": pjoin(WEBROOT, "img", "favicon.ico")
         }
 }
 
-class HTTPServ():
+class HTTPServ(): #TODO: html cache
 
     @staticmethod
     def initialize():
@@ -57,7 +65,14 @@ class HTTPServ():
     @cherrypy.expose
     def courses(self, cid=None):
         pprint.pprint(cherrypy.request.params)
-        return 'courses id: %s' % cid
+        if cid is None:
+            with open("./html/courses.html") as html:
+                return html.read()
+        else:
+            with db.Course() as course:
+                result = course.select("UUID='%s'" % cid)
+                if result:
+                    return `[getattr(result[0], attrname) for attrname in db.Course.listfileds()]`
 
     @cherrypy.expose
     def labscene(self, mode=None, vid=None):
