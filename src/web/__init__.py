@@ -79,7 +79,11 @@ class HTTPServ(): #TODO: html cache
 
     @cherrypy.expose
     def labscene(self, mode=None, vid=None):
-        return "404"
+        try:
+            with open(pjoin(WEBROOT, "html/labscene.html")) as html:
+                return html.read()
+        except IOError:
+            return "404"
 
 if __name__ == "__main__":
     HTTPServ.initialize()

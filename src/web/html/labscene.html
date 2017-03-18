@@ -2,12 +2,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="/static/css/layout-labscene.css" type="text/css">
 <title>ShitYun翔云实验桌</title>
 </head>
-<body>
-<div id="user"></div>
-<div id="vnc"></div>
-<div id="note"></div>
-<div id="book"></div>
-</body>
+<frameset cols="80%,20%" id="outer">
+    <frame src="/static/html/labscene-vnc.html" name="vnc" title="环境" id="vnc">
+    <frameset rows="10%,20%,20%,50%" id="inner">
+        <frame src="/static/html/labscene-user.html" name="user" title="用户" id="user">
+        <frame src="/static/html/labscene-note.html" name="note" title="笔记" id="note">
+        <frame src="/static/html/labscene-book.html" name="book" title="板书" id="book">
+        <frame src="about:blank" name="book-content" title="内容" class="book-content" id="book-content">
+    </frameset>
+</frameset>
 </html>
