@@ -2,7 +2,11 @@
 
 a{
 	text-decoration:none;
-	color:#fff;
+	color:white;
+}
+
+a:hover{
+    color:black;
 }
 
 #background{
