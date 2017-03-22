@@ -4,13 +4,12 @@ import cherrypy
 from os.path import abspath, dirname, join as pjoin
 import pprint
 import db
-from socket import gethostname, gethostbyname
 
 WEBROOT = abspath(dirname(__file__))
 
 conf = {
     "global": {
-        "server.socket_host": gethostbyname(gethostname()),
+        "server.socket_host": "0.0.0.0",
         "server.socket_port": 9527,
         "server.thread_pool": 8
     },
