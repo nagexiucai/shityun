@@ -19,11 +19,13 @@ class Config(object):
                "UUID":None,
                "Image":"/etc/shityun/default.img",
                "MEM":262144,
+               "CPU":1,
                "MAC":None,
                "Net":"default",
                "VNCPORT":"-1",
                "VNCAUTO":"yes",
-               "VNCPW":"shityun"}
+               "VNCPW":"shityun",
+               "VNCHOST":"0.0.0.0"}
     def verify(self):
         if self.UUID is None:
             self.UUID = str(uuid.uuid1())
