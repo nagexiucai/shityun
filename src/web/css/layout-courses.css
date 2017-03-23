@@ -1,9 +1,11 @@
 @CHARSET "UTF-8";
 
+#grid #heaven #earth #yy #gua #xing #season{}
+
 #grid{
     min-width:666px;
     display:grid;
-    grid-template-rows:auto 10px auto 10px auto 10px auto 10px auto;
+    grid-template-rows:auto 10px auto 10px auto 10px auto 10px auto 10px auto 10px auto 10px auto 10px auto;
     grid-template-columns:auto 10px auto 10px auto 10px auto 10px auto 10px auto 10px auto 10px auto 10px auto 10px auto;
     margin:0px;
     padding:60px;
@@ -25,26 +27,62 @@
 
 #kiosk{
     height:999px;
-    grid-area:5/1/8/20;
+    grid-area:5/1/16/20;
 }
 
 #heaven{
-    height:50%;
-    grid-row:5/6;
+    height:20%;
     display:grid;
+    grid-row:5/6;
     grid-template-columns:repeat(5, auto);
 }
 
 #earth{
-    height:50%;
-    grid-row:7/8;
+    height:20%;
     display:grid;
+    grid-row:7/8;
     grid-template-columns:repeat(6, auto);
+}
+
+#yy{
+    height:15%;
+    display:grid;
+    grid-row:9/10;
+    grid-template-columns:repeat(4, auto);
+}
+
+#yinn{
+    grid-column:1/3;
+}
+
+#yang{
+    grid-column:3/5;
+}
+
+#gua{
+    height:15%;
+    display:grid;
+    grid-row:11/12;
+    grid-template-columns:repeat(8, auto);
+}
+
+#xing{
+    height:15%;
+    display:grid;
+    grid-row:13/14;
+    grid-template-columns:repeat(5, auto);
+}
+
+#season{
+    height:15%;
+    display:grid;
+    grid-row:15/16;
+    grid-template-columns:repeat(4, auto);
 }
 
 #status{
     height:111px;
-    grid-area:9/1/10/20;
+    grid-area:17/1/18/20;
     background:yellow;
 }
 
