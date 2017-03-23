@@ -1,14 +1,16 @@
 @CHARSET "UTF-8";
 
-#grid #heaven #earth #yy #gua #xing #season{}
-
 #grid{
-    min-width:666px;
+    width:999px;
     display:grid;
     grid-template-rows:auto 10px auto 10px auto 10px auto 10px auto 10px auto 10px auto 10px auto 10px auto;
     grid-template-columns:auto 10px auto 10px auto 10px auto 10px auto 10px auto 10px auto 10px auto 10px auto 10px auto;
-    margin:0px;
-    padding:60px;
+    margin-top:0;
+    margin-bottom:0;
+    margin-left:auto;
+    margin-right:auto;
+    padding-top:60px;
+    padding-bottom:40px;
     background:silver;
     text-align:center;
 }
@@ -26,7 +28,7 @@
 }
 
 #kiosk{
-    height:999px;
+    height:1111px;
     grid-area:5/1/16/20;
 }
 
@@ -49,14 +51,6 @@
     display:grid;
     grid-row:9/10;
     grid-template-columns:repeat(4, auto);
-}
-
-#yinn{
-    grid-column:1/3;
-}
-
-#yang{
-    grid-column:3/5;
 }
 
 #gua{
@@ -87,99 +81,194 @@
 }
 
 .item{
-    border:5px solid silver;
+    border:1px solid silver;
     background:deepskyblue;
-    background-size:cover;
-}
-
-.item:hover{
-    background:rosybrown;
+    -moz-background-size:100% 100%;
+    -webkit-background-size:100% 100%;
+    -o-background-size:100% 100%;
+    background-size:100% 100%;
 }
 
 #jia{
-    background-image:url();
+    background-image:url(/static/img/courses/3d.png);
 }
 
 #yi{
-    background-image:url();
+    background-image:url(/static/img/courses/ada.png);
 }
 
 #bing{
-    background-image:url();
+    background-image:url(/static/img/courses/adobe.png);
 }
 
 #ding{
-    background-image:url();
+    background-image:url(/static/img/courses/apple.png);
 }
 
 #ww{
-    background-image:url();
+    background-image:url(/static/img/courses/arm.png);
 }
 
 #ji{
-    background-image:url();
+    background-image:url(/static/img/courses/bsd.png);
 }
 
 #geng{
-    background-image:url();
+    background-image:url(/static/img/courses/c.png);
 }
 
 #xin{
-    background-image:url();
+    background-image:url(/static/img/courses/computerp.png);
 }
 
 #ren{
-    background-image:url();
+    background-image:url(/static/img/courses/computers.png);
 }
 
 #gui{
-    background-image:url();
+    background-image:url(/static/img/courses/cpp.png);
 }
 
 #zi{
-    background-image:url();
+    background-image:url(/static/img/courses/delphi.png);
 }
 
 #chou{
-    background-image:url();
+    background-image:url(/static/img/courses/ecomputer.png);
 }
 
 #yin{
-    background-image:url();
+    background-image:url(/static/img/courses/fortran.png);
 }
 
 #mao{
-    background-image:url();
+    background-image:url(/static/img/courses/gnu.png);
 }
 
 #chen{
-    background-image:url();
+    background-image:url(/static/img/courses/golang.png);
 }
 
 #si{
-    background-image:url();
+    background-image:url(/static/img/courses/hedy-lamarr.png);
 }
 
 #wu{
-    background-image:url();
+    background-image:url(/static/img/courses/intel.png);
 }
 
 #wei{
-    background-image:url();
+    background-image:url(/static/img/courses/java.png);
 }
 
 #shen{
-    background-image:url();
+    background-image:url(/static/img/courses/javascript.png);
 }
 
 #you{
-    background-image:url();
+    background-image:url(/static/img/courses/minix.png);
 }
 
 #xu{
-    background-image:url();
+    background-image:url(/static/img/courses/lisp.png);
 }
 
 #hai{
-    background-image:url();
+    background-image:url(/static/img/courses/microsoft.png);
+}
+
+#vplus{
+    background-image:url(/static/img/courses/vplus.png);
+}
+#vplus:hover{
+    background-image:url(/static/img/courses/vmark.png);
+}
+
+#yinn{
+    background-image:url(/static/img/courses/linux.png);
+}
+#yinn:hover{
+    background-image:url(/static/img/courses/linux~.png);
+}
+
+#yang{
+    background-image:url(/static/img/courses/nagexiucai.png);
+}
+#yang:hover{
+    background-image:url(/static/img/courses/nagexiucai~.png);
+}
+
+#vmark{
+    background-image:url(/static/img/courses/vmark.png);
+}
+#vmark:hover{
+    background-image:url(/static/img/courses/vplus.png);
+}
+
+#qian{
+    background-image:url(/static/img/courses/oauth.png);
+}
+
+#kun{
+    background-image:url(/static/img/courses/pascal.png);
+}
+
+#xun{
+    background-image:url(/static/img/courses/perl.png);
+}
+
+#zhen{
+    background-image:url(/static/img/courses/php.png);
+}
+
+#kan{
+    background-image:url(/static/img/courses/python.png);
+}
+
+#li{
+    background-image:url(/static/img/courses/qemu.png);
+}
+
+#gen{
+    background-image:url(/static/img/courses/qualcomm.png);
+}
+
+#dui{
+    background-image:url(/static/img/courses/ror.png);
+}
+
+#mecury{
+    background-image:url(/static/img/courses/rss.png);
+}
+
+#mars{
+    background-image:url(/static/img/courses/ruby.png);
+}
+
+#venus{
+    background-image:url(/static/img/courses/ssh.png);
+}
+
+#jove{
+    background-image:url(/static/img/courses/tcp-ip.png);
+}
+
+#saturn{
+    background-image:url(/static/img/courses/ti.png);
+}
+
+#spring{
+    background-image:url(/static/img/courses/transistor.png);
+}
+
+#summer{
+    background-image:url(/static/img/courses/turing.png);
+}
+
+#autumn{
+    background-image:url(/static/img/courses/unix.png);
+}
+
+#winter{
+    background-image:url(/static/img/courses/www.png);
 }
