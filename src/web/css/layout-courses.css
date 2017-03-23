@@ -51,8 +51,97 @@
 .item{
     border:5px solid silver;
     background:deepskyblue;
+    background-size:cover;
 }
 
 .item:hover{
     background:rosybrown;
+}
+
+#jia{
+    background-image:url();
+}
+
+#yi{
+    background-image:url();
+}
+
+#bing{
+    background-image:url();
+}
+
+#ding{
+    background-image:url();
+}
+
+#ww{
+    background-image:url();
+}
+
+#ji{
+    background-image:url();
+}
+
+#geng{
+    background-image:url();
+}
+
+#xin{
+    background-image:url();
+}
+
+#ren{
+    background-image:url();
+}
+
+#gui{
+    background-image:url();
+}
+
+#zi{
+    background-image:url();
+}
+
+#chou{
+    background-image:url();
+}
+
+#yin{
+    background-image:url();
+}
+
+#mao{
+    background-image:url();
+}
+
+#chen{
+    background-image:url();
+}
+
+#si{
+    background-image:url();
+}
+
+#wu{
+    background-image:url();
+}
+
+#wei{
+    background-image:url();
+}
+
+#shen{
+    background-image:url();
+}
+
+#you{
+    background-image:url();
+}
+
+#xu{
+    background-image:url();
+}
+
+#hai{
+    background-image:url();
 }
