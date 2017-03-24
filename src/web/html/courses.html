@@ -6,7 +6,21 @@
 <link rel="stylesheet" href="/static/css/layout-courses.css" type="text/css">
 <title>ShitYun翔云课程</title>
 </head>
-<body id="grid">
+<body>
+<div id="modal">
+	<div id="ral" title="register and login">
+		<form method="post" action="javascript:void(0);">
+			<input type="radio" name="whattodo" value="login" onclick="alert('隐藏一些');"/>
+			<input type="radio" name="whattodo" value="register" onclick="alert('显示一些');"/><br/>
+			账户：<input type="text" name="account"/><br/>
+			密码：<input type="password" name="password"/><br/>
+			邮箱：<input type="text" name="mail"/><br/>
+			验证：<input type="text" name="authcode"/><br/>
+			确认：<input type="submit"/>
+		</form>
+	</div>
+</div>
+<div id="grid">
 <div id="advertisement">广告</div>
 <div id="filter">筛选</div>
 <div id="kiosk">
@@ -67,5 +81,6 @@
 	</div>
 </div>
 <div id="status">状态</div>
+</div>
 </body>
 </html>
