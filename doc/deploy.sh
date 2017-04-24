@@ -5,7 +5,9 @@ yum install -y qemu-kvm*
 yum install -y libvirt
 yum install -y virt-install
 yum install -y git
-yum install -y python-
+# yum install -y python-pip # yum search python-pip
+yum install -y inotify-tools
+yum install -y python-inotify
 pip install --upgrade pip
 pip install cherrypy
 pip install websockify
