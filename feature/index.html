@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <meta charset='UTF-8'/>
+        <meta name='keywords' content='那个秀才 PrivateCloud'/>
+        <meta name='description' content='那个秀才'/>
+        <link rel='icon' type='image/x-icon' href='./favicon.ico'>
+        <title>那个秀才|ShitYun</title>
+        <style type='text/css'>
+            * {
+                margin:0;
+                padding:0;
+                width:100%;
+                font-size:30px;
+                line-height:40px;
+                text-align:center;
+            }
+            body {
+                background-image:url('./nebula.jpg');
+                background-repeat:no-repeat;
+                background-size:cover;
+            }
+            .container {
+                z-index:999;
+                position:fixed;
+                top:0;
+            }
+            form {
+                width:80%;
+                margin:0 auto;
+                border:1px solid silver;
+                margin-top:200px;
+            }
+            .little,
+            .middle {
+                display:block;
+                margin:0 auto;
+            }
+            .little {
+                width:100px;
+            }
+            .middle {
+                width:200px;
+            }
+            select {
+                height:45px;
+            }
+            label {
+                background-color:black;
+                color:white;
+            }
+            textarea {
+                width:60%;
+            }
+        </style>
+        <script type='text/javascript'>
+            function bgchange(me) {
+                me.setAttribute('style','display:none;')
+            }
+        </script>
+    <body>
+        <video autoplay muted style='width:100%;height:100%;' onended='bgchange(this);'>
+            <source src='./cloud.mp4'>
+        </video>
+        <div class='container'>
+            <form id='test' action='javascript:void(0);' method='get'>
+                <label for='name'>姓名</label>
+                <input class='bb' bbq='user' type='text' name='name' value='x@y.z' id='name'/>
+                <label for='nick'>昵称</label>
+                <input class='bb' bbq='user' type='text' name='nick' value='x@y.z' id='nick'/>
+                <input class='little' type='password' name='password' value='default' readonly/>
+                <select class='little' class='bb' bbq='owner' name='force'>
+                    <option>曹操</option>
+                    <option>刘备</option>
+                    <option>孙权</option>
+                </select>
+                <input class='middle' type='submit' name='submit' value='进入翔云'/>
+            </form>
+            <textarea name='comment' form='test' readonly>很挫的双向绑定呆哞</textarea>
+        </div>
+        <script type='text/javascript' src='./bibind.js'></script>
+    </body>
+</html>
